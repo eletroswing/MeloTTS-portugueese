@@ -364,7 +364,7 @@ def hira2kata(text: str) -> str:
 
 _SYMBOL_TOKENS = set(list("・、。？！"))
 _NO_YOMI_TOKENS = set(list("「」『』―（）［］[]"))
-_TAGGER = MeCab.Tagger()
+_TAGGER = MeCab.Tagger("-r /etc/mecabrc -d /var/lib/mecab/dic/ipadic/")
 
 
 def text2kata(text: str) -> str:
